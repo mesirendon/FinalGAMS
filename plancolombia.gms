@@ -10,15 +10,171 @@ $Offtext
 
 Sets
   i Departamentos /CUN, ANT, BOY, NSAN, TOL/
+  CUNANT(i) "Solo los departamentos de Cundinamarca y Antioquia" /CUN, ANT/
   j Municipios /BOG, CAB, ANA, COT, FUN, MED, EBR, BET, COP, ENV, TUN, CHI, NOB, PES, CUC, CAC, SCX, IBA, LER, VEN, COE, PIE/
   p Proyectos /P1*P150/
   h Meses /1*12/
+  a Areas /Economica, DefNacional, DerHumanos, PartSocial, DlloHumano/
+  l Indicadores /TasaDesempleo, PercInseguridad, TasaHomicidios, IndParticipacion, IncidFlagelo/
+
   ciu(i, j) "Departamentos y Municipios"
     /CUN.BOG, CUN.CAB, CUN.ANA, CUN.COT, CUN.FUN,
      ANT.MED, ANT.EBR, ANT.BET, ANT.COP, ANT.ENV,
      BOY.TUN, BOY.CHI, BOY.NOB, BOY.PES,
      NSAN.CUC, NSAN.CAC, NSAN.SCX,
      TOL.IBA, TOL.LER, TOL.VEN, TOL.COE, TOL.PIE/;
+
+Table Efecto(p, a, l) "Proyecto Vs Area e Indicador"
+P1.DefNacional.PercInseguridad   = -0.0236
+P2.PartSocial.IndParticipacion   = 0.0082
+P3.Economica.TasaDesempleo       = -0.0069
+P4.DefNacional.PercInseguridad   = -0.0198
+P5.Economica.TasaDesempleo       = -0.0048
+P6.DefNacional.PercInseguridad   = -0.0023
+P7.Economica.TasaDesempleo       = -0.016
+P8.DlloHumano.IncidFlagelo       = -0.0102
+P9.DefNacional.PercInseguridad   = -0.0145
+P10.DlloHumano.IncidFlagelo      = -0.0056
+P11.Economica.TasaDesempleo      = -0.0049
+P12.Economica.TasaDesempleo      = -0.0019
+P13.Economica.TasaDesempleo      = -0.0019
+P14.DlloHumano.IncidFlagelo      = -0.0077
+P15.PartSocial.IndParticipacion  = 0.0159
+P16.PartSocial.IndParticipacion  = 0.0203
+P17.DefNacional.PercInseguridad  = -0.0151
+P18.DlloHumano.IncidFlagelo      = -0.0013
+P19.DlloHumano.IncidFlagelo      = -0.009
+P20.DlloHumano.IncidFlagelo      = -0.0158
+P21.Economica.TasaDesempleo      = -0.0158
+P22.PartSocial.IndParticipacion  = 0.0239
+P23.Economica.TasaDesempleo      = -0.0157
+P24.PartSocial.IndParticipacion  = 0.0108
+P25.DefNacional.PercInseguridad  = -0.0083
+P26.PartSocial.IndParticipacion  = 0.0056
+P27.DlloHumano.IncidFlagelo      = -0.0072
+P28.Economica.TasaDesempleo      = -0.0171
+P29.DefNacional.PercInseguridad  = -0.0191
+P30.DefNacional.PercInseguridad  = -0.0124
+P31.Economica.TasaDesempleo      = -0.0087
+P32.Economica.TasaDesempleo      = -0.0159
+P33.DefNacional.PercInseguridad  = -0.0185
+P34.Economica.TasaDesempleo      = -0.0153
+P35.PartSocial.IndParticipacion  = 0.0069
+P36.DlloHumano.IncidFlagelo      = -0.007
+P37.DlloHumano.IncidFlagelo      = -0.0056
+P38.PartSocial.IndParticipacion  = 0.0214
+P39.Economica.TasaDesempleo      = -0.014
+P40.PartSocial.IndParticipacion  = 0.024
+P41.DlloHumano.IncidFlagelo      = -0.0152
+P42.DlloHumano.IncidFlagelo      = -0.0014
+P43.PartSocial.IndParticipacion  = 0.0014
+P44.Economica.TasaDesempleo      = -0.0238
+P45.DlloHumano.IncidFlagelo      = -0.0105
+P46.DerHumanoss.TasaHomicidios   = -0.209
+P47.Economica.TasaDesempleo      = -0.0038
+P48.PartSocial.IndParticipacion  = 0.0018
+P49.DlloHumano.IncidFlagelo      = -0.0111
+P50.PartSocial.IndParticipacion  = 0.0171
+P51.DerHumanoss.TasaHomicidios   = -0.206
+P52.DefNacional.PercInseguridad  = -0.0129
+P53.DerHumanoss.TasaHomicidios   = -0.178
+P54.PartSocial.IndParticipacion  = 0.0211
+P55.DlloHumano.IncidFlagelo      = -0.0105
+P56.DefNacional.PercInseguridad  = -0.0183
+P57.DlloHumano.IncidFlagelo      = -0.0048
+P58.PartSocial.IndParticipacion  = 0.0133
+P59.DerHumanoss.TasaHomicidios   = -0.228
+P60.DerHumanoss.TasaHomicidios   = -0.231
+P61.DefNacional.PercInseguridad  = -0.0155
+P62.DerHumanoss.TasaHomicidios   = -0.164
+P63.PartSocial.IndParticipacion  = 0.025
+P64.DefNacional.PercInseguridad  = -0.0043
+P65.PartSocial.IndParticipacion  = 0.024
+P66.DlloHumano.IncidFlagelo      = -0.0193
+P67.DefNacional.PercInseguridad  = -0.0051
+P68.PartSocial.IndParticipacion  = 0.0157
+P69.DefNacional.PercInseguridad  = -0.0012
+P70.PartSocial.IndParticipacion  = 0.0122
+P71.DlloHumano.IncidFlagelo      = -0.0187
+P72.DerHumanoss.TasaHomicidios   = -0.184
+P73.DefNacional.PercInseguridad  = -0.0171
+P74.DlloHumano.IncidFlagelo      = -0.0033
+P75.PartSocial.IndParticipacion  = 0.0045
+P76.PartSocial.IndParticipacion  = 0.0067
+P77.DerHumanoss.TasaHomicidios   = -0.21
+P78.PartSocial.IndParticipacion  = 0.018
+P79.PartSocial.IndParticipacion  = 0.0221
+P80.DerHumanoss.TasaHomicidios   = -0.217
+P81.DerHumanoss.TasaHomicidios   = -0.142
+P82.DerHumanoss.TasaHomicidios   = -0.162
+P83.DefNacional.PercInseguridad  = -0.0108
+P84.DerHumanoss.TasaHomicidios   = -0.195
+P85.DefNacional.PercInseguridad  = -0.0097
+P86.Economica.TasaDesempleo      = -0.0107
+P87.PartSocial.IndParticipacion  = 0.0108
+P88.DerHumanoss.TasaHomicidios   = -0.103
+P89.DlloHumano.IncidFlagelo      = -0.0153
+P90.DerHumanoss.TasaHomicidios   = -0.237
+P91.DlloHumano.IncidFlagelo      = -0.0215
+P92.DlloHumano.IncidFlagelo      = -0.0191
+P93.PartSocial.IndParticipacion  = 0.013
+P94.DefNacional.PercInseguridad  = -0.0016
+P95.PartSocial.IndParticipacion  = 0.019
+P96.Economica.TasaDesempleo      = -0.0014
+P97.PartSocial.IndParticipacion  = 0.022
+P98.PartSocial.IndParticipacion  = 0.0234
+P99.DerHumanoss.TasaHomicidios   = -0.148
+P100.PartSocial.IndParticipacion = 0.0117
+P101.DefNacional.PercInseguridad = -0.0095
+P102.DlloHumano.IncidFlagelo     = -0.003
+P103.PartSocial.IndParticipacion = 0.0106
+P104.Economica.TasaDesempleo     = -0.01
+P105.DefNacional.PercInseguridad = -0.0131
+P106.Economica.TasaDesempleo     = -0.0195
+P107.PartSocial.IndParticipacion = 0.0042
+P108.PartSocial.IndParticipacion = 0.0019
+P109.DlloHumano.IncidFlagelo     = -0.0242
+P110.Economica.TasaDesempleo     = -0.0086
+P111.DefNacional.PercInseguridad = -0.0076
+P112.DerHumanoss.TasaHomicidios  = -0.128
+P113.PartSocial.IndParticipacion = 0.0064
+P114.DlloHumano.IncidFlagelo     = -0.0141
+P115.DlloHumano.IncidFlagelo     = -0.019
+P116.PartSocial.IndParticipacion = 0.0089
+P117.DerHumanoss.TasaHomicidios  = -0.212
+P118.DefNacional.PercInseguridad = -0.0022
+P119.Economica.TasaDesempleo     = -0.0125
+P120.DerHumanoss.TasaHomicidios  = -0.124
+P121.DlloHumano.IncidFlagelo     = -0.0088
+P122.Economica.TasaDesempleo     = -0.0108
+P123.DerHumanoss.TasaHomicidios  = -0.152
+P124.PartSocial.IndParticipacion = 0.0127
+P125.PartSocial.IndParticipacion = 0.0143
+P126.DerHumanoss.TasaHomicidios  = -0.116
+P127.PartSocial.IndParticipacion = 0.016
+P128.Economica.TasaDesempleo     = -0.0185
+P129.DerHumanoss.TasaHomicidios  = -0.101
+P130.DlloHumano.IncidFlagelo     = -0.0185
+P131.DerHumanoss.TasaHomicidios  = -0.236
+P132.Economica.TasaDesempleo     = -0.0182
+P133.DlloHumano.IncidFlagelo     = -0.0242
+P134.PartSocial.IndParticipacion = 0.0068
+P135.Economica.TasaDesempleo     = -0.0103
+P136.Economica.TasaDesempleo     = -0.016
+P137.DlloHumano.IncidFlagelo     = -0.0176
+P138.DlloHumano.IncidFlagelo     = -0.0108
+P139.DerHumanoss.TasaHomicidios  = -0.243
+P140.PartSocial.IndParticipacion = 0.0244
+P141.Economica.TasaDesempleo     = -0.0049
+P142.DlloHumano.IncidFlagelo     = -0.0224
+P143.DlloHumano.IncidFlagelo     = -0.0094
+P144.DlloHumano.IncidFlagelo     = -0.0169
+P145.Economica.TasaDesempleo     = -0.0068
+P146.Economica.TasaDesempleo     = -0.0234
+P147.Economica.TasaDesempleo     = -0.0125
+P148.PartSocial.IndParticipacion = 0.0064
+P149.DefNacional.PercInseguridad = -0.0021
+P150.DlloHumano.IncidFlagelo     = -0.0203;
 
 Table MPR(p, ciu) "Proyectos que se aplican en ciudades"
            CUN.BOG   CUN.CAB   CUN.ANA   CUN.COT   CUN.FUN   ANT.MED   ANT.EBR   ANT.BET   ANT.COP   ANT.ENV   BOY.TUN   BOY.CHI   BOY.NOB   BOY.PES   NSAN.CUC   NSAN.CAC   NSAN.SCX   TOL.IBA   TOL.LER   TOL.VEN   TOL.COE   TOL.PIE
@@ -645,3 +801,17 @@ Parameter
      BOY  .06
      NSAN .02
      TOL  .04/
+
+  IND2015(l) "Valores 2015 para los indicadores"
+    /TasaDesempleo    = 0.089
+     PercInseguridad  = 0.519
+     TasaHomicidios   = 0.25
+     IndParticipacion = 0.684
+     IncidFlagelo     = 0.282/
+
+  INDESP(l) "Valores esperados para los indicadores"
+    /TasaDesempleo    = 0.073
+     PercInseguridad  = 0.478
+     TasaHomicidios   = 0.2
+     IndParticipacion = 0.703
+     IncidFlagelo     = 0.267/
